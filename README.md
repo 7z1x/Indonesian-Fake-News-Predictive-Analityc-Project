@@ -29,10 +29,10 @@ Proyek ini mengusulkan dua solusi:
 
 Sumber: Indonesia False News Dataset dari [Kaggle](https://www.kaggle.com/datasets/muhammadghazimuharam/indonesiafalsenews) dan bersumber dari akun kaggle yaitu Muhammad Ghazi Muharam.
 
-- Jumlah Data: Kombinasi data latih dan uji, berjumlah total 4701 dan total 4231 sampel (setelah penggabungan dan penghapusan missing value).
   
 ### **Fitur pada Dataset:**
 - Data set ini berjumlah 4701 baris data, dan memiliki 6 fitur yang terdiri dari ID, label, tanggal, judul, narasi, nama file gambar. Berikut adalah pengecekan jumlah baris dan kolom pada dataset dengan menggunakan memanggil variabel data yang telah dideklarasikan.
+- total 4231 sampel (setelah penggabungan dan penghapusan missing value).
  
 ![](https://github.com/7z1x/Indonesian-Fake-News-Predictive-Analityc-Project/blob/6ef8af1438317e0b8f10ea3e96763a8ea924d6c6/image/adta%20distirbusi.jpg)
 
@@ -55,14 +55,15 @@ Sumber: Indonesia False News Dataset dari [Kaggle](https://www.kaggle.com/datase
 | 1     | Berita Hoax  | 3465   |
 | 0     | Berita Benar | 766    |
 
-![](https://github.com/7z1x/Indonesian-Fake-News-Predictive-Analityc-Project/blob/6ef8af1438317e0b8f10ea3e96763a8ea924d6c6/image/distribusi%20data%20label.jpg)
 
-- Menganalisis panjang teks untuk melihat apakah ada pola tertentu antara panjang teks dan label (hoax/benar).
+![](https://github.com/7z1x/Indonesian-Fake-News-Predictive-Analityc-Project/blob/6ef8af1438317e0b8f10ea3e96763a8ea924d6c6/image/distribusi%20data%20label.jpg)<br>
+
+- Menganalisis panjang teks untuk melihat apakah ada pola tertentu antara panjang teks dan label (hoax/benar).<br>
 ![](https://github.com/7z1x/Indonesian-Fake-News-Predictive-Analityc-Project/blob/6ef8af1438317e0b8f10ea3e96763a8ea924d6c6/image/panjang%20teks.jpg)
 
 
 ## Data Preparation
-- ***Menggabungan Kolom***: Menggabungkan judul dan narasi menjadi kolom teks.
+- ***Menggabungan Kolom***: Menggabungkan judul dan narasi menjadi kolom teks.<br>
 ![](https://raw.githubusercontent.com/7z1x/Indonesian-Fake-News-Predictive-Analityc-Project/6ef8af1438317e0b8f10ea3e96763a8ea924d6c6/image/data%20yang%20sudah%20menggabungkan%20judul%20dan%20narasi%20lalu%20di%20tambahkan%C2%A0label.jpg)
 
 ### Preprocessing Teks:
