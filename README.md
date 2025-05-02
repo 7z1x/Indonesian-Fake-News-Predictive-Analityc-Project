@@ -32,9 +32,9 @@ Sumber: Indonesia False News Dataset dari [Kaggle](https://www.kaggle.com/datase
 - Jumlah Data: Kombinasi data latih dan uji, berjumlah total 4701 dan total 4231 sampel (setelah penggabungan dan penghapusan missing value).
   
 ### **Fitur pada Dataset:**
-- Data set ini berjumlah 4701 baris data, dan memiliki 6 fitur yang terdiri dari ID, labelt, tanggal, judul, narasi, nama file gambar. Berikut adalah pengecekan jumlah baris dan kolom pada dataset dengan menggunakan memanggil variabel data yang telah dideklarasikan.
+- Data set ini berjumlah 4701 baris data, dan memiliki 6 fitur yang terdiri dari ID, label, tanggal, judul, narasi, nama file gambar. Berikut adalah pengecekan jumlah baris dan kolom pada dataset dengan menggunakan memanggil variabel data yang telah dideklarasikan.
  
-***ada image data***
+![](https://github.com/7z1x/Indonesian-Fake-News-Predictive-Analityc-Project/blob/6ef8af1438317e0b8f10ea3e96763a8ea924d6c6/image/adta%20distirbusi.jpg)
 
 - Terdapat missing value (NAN) atau nilai kosong pada kolom label yang perlu penanganan, Berikut tabelnya:
   
@@ -47,25 +47,24 @@ Sumber: Indonesia False News Dataset dari [Kaggle](https://www.kaggle.com/datase
 	| narasi          	| 0         	|
 	| nama file gambar	| 0          	|
 
-***ada image null data***
 - Tahap ini dilakukan untuk menghapus kolom yang mengandung nilai kosong (NaN) guna memastikan kualitas data sebelum masuk ke tahap pemodelan.
-***ada image data label yang sudah tidak ada null**
   
 ### **Distribusi data label:**
-***ada image barplot diagram disritbusi***
-
 | Label | Nama         | Jumlah |
 |-------|--------------|--------|
 | 1     | Berita Hoax  | 3465   |
 | 0     | Berita Benar | 766    |
 
-***ada image barplot diagram disritbusi***
+![](https://github.com/7z1x/Indonesian-Fake-News-Predictive-Analityc-Project/blob/6ef8af1438317e0b8f10ea3e96763a8ea924d6c6/image/distribusi%20data%20label.jpg)
 
 - Menganalisis panjang teks untuk melihat apakah ada pola tertentu antara panjang teks dan label (hoax/benar).
+![](https://github.com/7z1x/Indonesian-Fake-News-Predictive-Analityc-Project/blob/6ef8af1438317e0b8f10ea3e96763a8ea924d6c6/image/panjang%20teks.jpg)
+
 
 ## Data Preparation
-- ***Menggabungan Kolom***: Menggabungkan judul dan narasi menjadi kolom teks.<br>
-***ada image data teks***
+- ***Menggabungan Kolom***: Menggabungkan judul dan narasi menjadi kolom teks.
+![](https://raw.githubusercontent.com/7z1x/Indonesian-Fake-News-Predictive-Analityc-Project/6ef8af1438317e0b8f10ea3e96763a8ea924d6c6/image/data%20yang%20sudah%20menggabungkan%20judul%20dan%20narasi%20lalu%20di%20tambahkan%C2%A0label.jpg)
+
 ### Preprocessing Teks:
 - Konversi ke huruf kecil.<br>
 - Penghapusan angka menggunakan regex.<br>
@@ -136,6 +135,11 @@ RandomizedSearchCV adalah teknik pencarian hyperparameter yang digunakan untuk m
 |               | 1     |          | 0.88      | 0.93   | 0.90     |                         |
 
 
+- Confusion Matrix Random Forest<br>
+![](https://github.com/7z1x/Indonesian-Fake-News-Predictive-Analityc-Project/blob/6ef8af1438317e0b8f10ea3e96763a8ea924d6c6/image/WhatsApp%20Image%202025-05-02%20at%2019.25.54_b7434aba.jpg)
+
+- Confusion Matrix Support Vector Machine<br>
+![](https://github.com/7z1x/Indonesian-Fake-News-Predictive-Analityc-Project/blob/6ef8af1438317e0b8f10ea3e96763a8ea924d6c6/image/svm%20.jpg)
 
 ## Kesimpulan
 - SVM adalah model terbaik dari dua yang diuji, unggul dalam hampir semua metrik terutama pada deteksi berita hoax.
